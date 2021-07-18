@@ -7,7 +7,14 @@ import {
 } from "react-router-dom";
 import Home from './home.js';
 import Home2 from './home2.js';
+import FirebaseConfig from './firebase.js';
+import firebase from "firebase/app";
+// Add the Firebase services that you want to use
+import "firebase/auth";
+import "firebase/firestore"
 
+
+const fb=firebase.initializeApp(FirebaseConfig)
 export default function App() {
   return (
     <Router>
