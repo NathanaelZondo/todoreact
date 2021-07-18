@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Home() {
   const classes = useStyles();
-  const fb=firebase.initializeApp(FirebaseConfig)
+
  
 return (
     <div>

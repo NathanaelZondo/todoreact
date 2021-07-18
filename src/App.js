@@ -15,10 +15,10 @@ export default function App() {
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/home2">Home</Link>
             </li>
             <li>
-              <Link to="/home2">Home2</Link>
+              <Link to="/">Home2</Link>
             </li>
             
           </ul>
@@ -27,11 +27,11 @@ export default function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-        <Route path="/">
+        <Route path="/home2">
             <Home />
           </Route>
-          
-          <Route path="/home2">
+
+          <Route path="/">
             <Home2 />
           </Route>
          
