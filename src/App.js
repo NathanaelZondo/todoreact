@@ -30,6 +30,7 @@ export default function App() {
         <Route path="/">
             <Home />
           </Route>
+          
           <Route path="/home2">
             <Home2 />
           </Route>
