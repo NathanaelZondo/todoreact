@@ -12,6 +12,7 @@ import firebase from "firebase/app";
 // Add the Firebase services that you want to use
 import "firebase/auth";
 import "firebase/firestore"
+import Todo from './list.js';
 
 
 const fb=firebase.initializeApp(FirebaseConfig)
@@ -22,10 +23,10 @@ export default function App() {
         <nav>
           <ul>
             <li>
-              <Link to="/home2">Home</Link>
+              <Link to="/home2">SignIn</Link>
             </li>
             <li>
-              <Link to="/">Home2</Link>
+              <Link to="/">SignUp</Link>
             </li>
             
           </ul>
@@ -36,6 +37,9 @@ export default function App() {
         <Switch>
         <Route path="/home2">
             <Home />
+          </Route>
+          <Route path="/list">
+            <Todo />
           </Route>
 
           <Route path="/">

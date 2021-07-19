@@ -15,6 +15,9 @@ import Snackbar from '@material-ui/core/Snackbar';
 import Snackbar from '@material-ui/core/Snackbar';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
+import { useHistory } from "react-router-dom";
+import Todo from './list.js';
+
 
 export default function Signsin(){
 
@@ -22,7 +25,7 @@ export default function Signsin(){
   const [message, setMessage] = useState('')
   const [password, setPassword] = useState('')
   const [open, setOpen] = React.useState(false);
-
+  let history = useHistory();
 
   const handleClick = () => {
     setOpen(true);
@@ -50,6 +53,8 @@ export default function Signsin(){
     // Signed in 
     var user = userCredential.user;
      setMessage("Successful Sign In")
+     history.push("/list");
+
     console.log(user)
     handleClick()
     // ...
