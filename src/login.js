@@ -17,7 +17,8 @@ import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import { useHistory } from "react-router-dom";
 import Todo from './list.js';
-
+import Home from './home.js';
+import Home2 from './home2.js';
 
 
 export default function Logsin(){
@@ -77,9 +78,10 @@ export default function Logsin(){
   <form onSubmit={handleSubmit}>
    <TextField  onChange={event => setMail(event.target.value)}   id="standard-basic" placeholder="Email Address" />
    <br></br>
-   <TextField onChange={event => setPassword(event.target.value)} id="standard-basic" placeholder="Password" />
+   <TextField onChange={event => setPassword(event.target.value)} id="standard-basic" placeholder="Password" type="password" />
    <br></br> <br></br>
   <Button  variant="contained" color="primary" type="submit">Click</Button>
+  <Button  variant="contained" color="secondary" OnClick={()=>{ console.log("gtgtrgt")    }}  >Signup</Button>
   </form>
   <Snackbar
         anchorOrigin={{

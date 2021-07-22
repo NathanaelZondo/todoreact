@@ -20,7 +20,7 @@ export default function App() {
   return (
     <Router>
       <div>
-        <nav>
+        {/* <nav>
           <ul>
             <li>
               <Link to="/home2">SignIn</Link>
@@ -30,7 +30,7 @@ export default function App() {
             </li>
             
           </ul>
-        </nav>
+        </nav> */}
 
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}

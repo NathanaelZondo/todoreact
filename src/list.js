@@ -37,10 +37,10 @@ return (
       <h1 style={{"textAlign":"center"}}>To Do List</h1>
      
       <div className={classes.root}>
-      <Grid container spacing={1} elevation={0}>
+      <Grid container spacing={1} >
        
         <Grid item xs={4}>
-          <Paper className={classes.paper} elevation={0}>
+          <Paper className={classes.paper} elevation={0} style={{backgroundColor:"yellow"}}  elevation={3}>
 
           <Skeleton />
       <Skeleton animation={false} />
@@ -58,7 +58,7 @@ return (
           </Paper>
         </Grid>
         <Grid item xs={4}>
-          <Paper className={classes.paper} elevation={0}>
+          <Paper className={classes.paper} elevation={0} style={{backgroundColor:"blue"}} elevation={3}>
           <Skeleton />
       <Skeleton animation={false} />
       <Skeleton animation="wave" />
@@ -74,7 +74,7 @@ return (
           </Paper>
         </Grid>
         <Grid item xs={4}>
-          <Paper className={classes.paper} elevation={0}>
+          <Paper className={classes.paper} elevation={0} style={{backgroundColor:"red"}} elevation={3}>
           <Skeleton />
       <Skeleton animation={false} />
       <Skeleton animation="wave" />
