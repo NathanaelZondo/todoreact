@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     padding: theme.spacing(2),
     textAlign: 'center',
-    color: theme.palette.text.secondary,
+    color: "black",
     height:'75vh'
   },
 }));
@@ -68,21 +68,11 @@ return (
 
           </Paper>
         </Grid>
-        <Grid item xs={4}>
-          <Paper className={classes.paper}  style={{backgroundColor:"white"}} elevation={3}>
-          <Skeleton />
-      <Skeleton animation={false} />
-      <Skeleton animation="wave" />
-      <Skeleton />
-      <Skeleton animation={false} />
-      <Skeleton animation="wave" />
-      <Skeleton />
-      <Skeleton animation={false} />
-      <Skeleton animation="wave" />
-      <Skeleton />
-      <Skeleton animation={false} />
-      <Skeleton animation="wave" />
-      <List component="nav" className={classes.root} aria-label="mailbox folders">
+        <Grid item xs={4} style={{"scroll":"overflow"}}>
+          <Paper className={classes.paper}  style={{backgroundColor:"white",overflow:"scroll"}} elevation={3}>
+       
+     
+      <List component="nav" className={classes.root} aria-label="mailbox folders" style={{backgroundColor:"white"}}>
   <ListItem button>
     <ListItemText primary="Inbox" />    
      <Checkbox
@@ -90,26 +80,127 @@ return (
             icon={<StarIcon />}
             checkedIcon={<StarIcon />}
             name="checkedI"
-            style={{"color":"yellow"}}
           />
   </ListItem>
   <Divider />
   <ListItem button divider>
     <ListItemText primary="Drafts" />
+    <Checkbox
+            icon={<CheckBoxOutlineBlankIcon fontSize="small" />}
+            icon={<StarIcon />}
+            checkedIcon={<StarIcon />}
+            name="checkedI"
+          />
   </ListItem>
   <ListItem button>
     <ListItemText primary="Trash" />
+    <Checkbox
+            icon={<CheckBoxOutlineBlankIcon fontSize="small" />}
+            icon={<StarIcon />}
+            checkedIcon={<StarIcon />}
+            name="checkedI"
+          />
   </ListItem>
-  <Divider light />
+  <Divider  />
   <ListItem button>
     <ListItemText primary="Spam" />
+    <Checkbox
+            icon={<CheckBoxOutlineBlankIcon fontSize="small" />}
+            icon={<StarIcon />}
+            checkedIcon={<StarIcon />}
+            name="checkedI"
+          />
+  </ListItem>
+  <ListItem button>
+    <ListItemText primary="Spam" />
+    <Checkbox
+            icon={<CheckBoxOutlineBlankIcon fontSize="small" />}
+            icon={<StarIcon />}
+            checkedIcon={<StarIcon />}
+            name="checkedI"
+          />
+  </ListItem>
+  <ListItem button>
+    <ListItemText primary="Spam" />
+    <Checkbox
+            icon={<CheckBoxOutlineBlankIcon fontSize="small" />}
+            icon={<StarIcon />}
+            checkedIcon={<StarIcon />}
+            name="checkedI"
+          />
+  </ListItem>
+  <ListItem button>
+    <ListItemText primary="Spam" />
+    <Checkbox
+            icon={<CheckBoxOutlineBlankIcon fontSize="small" />}
+            icon={<StarIcon />}
+            checkedIcon={<StarIcon />}
+            name="checkedI"
+          />
+  </ListItem>
+  <ListItem button>
+    <ListItemText primary="Spam" />
+    <Checkbox
+            icon={<CheckBoxOutlineBlankIcon fontSize="small" />}
+            icon={<StarIcon />}
+            checkedIcon={<StarIcon />}
+            name="checkedI"
+          />
+  </ListItem>
+  <ListItem button>
+    <ListItemText primary="Spam" />
+    <Checkbox
+            icon={<CheckBoxOutlineBlankIcon fontSize="small" />}
+            icon={<StarIcon />}
+            checkedIcon={<StarIcon />}
+            name="checkedI"
+          />
+  </ListItem>
+  <ListItem button>
+    <ListItemText primary="Spam" />
+    <Checkbox
+            icon={<CheckBoxOutlineBlankIcon fontSize="small" />}
+            icon={<StarIcon />}
+            checkedIcon={<StarIcon />}
+            name="checkedI"
+          />
+  </ListItem>
+  <ListItem button>
+    <ListItemText primary="Spam" />
+    <Checkbox
+            icon={<CheckBoxOutlineBlankIcon fontSize="small" />}
+            icon={<StarIcon />}
+            checkedIcon={<StarIcon />}
+            name="checkedI"
+          />
+  </ListItem>
+  <ListItem button>
+    <ListItemText primary="Spam" />
+    <Checkbox
+            icon={<CheckBoxOutlineBlankIcon fontSize="small" />}
+            icon={<StarIcon />}
+            checkedIcon={<StarIcon />}
+            name="checkedI"
+          />
+  </ListItem>
+  <ListItem button>
+    <ListItemText primary="Spam" />
+    <Checkbox
+            icon={<CheckBoxOutlineBlankIcon fontSize="small" />}
+            icon={<StarIcon />}
+            checkedIcon={<StarIcon />}
+            name="checkedI"
+          />
   </ListItem>
 </List>
 
-      <div style ={{"height":"30px","width":"100%"}}>
+      <div style ={{"height":"40px","width":"100%",  position: "absolute",
+  left: "0px",
+  bottom: "70px",
+  zIndex: 1,backgroundColor:"green"}} align="center">
 
-  <Button color="secondary" variant="contained">+</Button>
-
+ 
+<Button color="secondary" variant="contained" style={{}}>+</Button>
 </div>
 
           </Paper>
