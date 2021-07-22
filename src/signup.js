@@ -68,7 +68,12 @@ export default function Signsin(){
   }); }
 
  
- 
+ function signin(){
+
+  console.log("gtgtrgt")
+  history.push("/home2");
+  
+ }
 
 
  
@@ -80,8 +85,12 @@ export default function Signsin(){
    <TextField onChange={event => setPassword(event.target.value)} id="standard-basic" placeholder="Password" type="password" />
    <br></br> <br></br>
   <Button  variant="contained" color="primary" type="submit">Click</Button>
-  <Button  variant="contained" color="secondary" OnClick={()=>{ history.push("/home2");}}  >Signin</Button>
+  <br></br>
+
   </form>
+
+  <br></br>
+  <Button  variant="contained" color="secondary" onClick={signin}  >Signin</Button>
   <Snackbar
         anchorOrigin={{
           vertical: 'bottom',

@@ -13,6 +13,16 @@ import Logsin from './login.js';
 import FirebaseConfig from './firebase.js';
 import Skeleton from '@material-ui/lab/Skeleton';
 import { makeStyles } from '@material-ui/core/styles';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import Divider from '@material-ui/core/Divider';
+import Checkbox from '@material-ui/core/Checkbox';
+import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
+import CheckBoxIcon from '@material-ui/icons/CheckBox';
+import Favorite from '@material-ui/icons/Favorite';
+import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
+import StarIcon from '@material-ui/icons/Star';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
     textAlign: 'center',
     color: theme.palette.text.secondary,
+    height:'75vh'
   },
 }));
 
@@ -37,10 +48,10 @@ return (
       <h1 style={{"textAlign":"center"}}>To Do List</h1>
      
       <div className={classes.root}>
-      <Grid container spacing={1} >
+      <Grid container spacing={0} >
        
         <Grid item xs={4}>
-          <Paper className={classes.paper} elevation={0} style={{backgroundColor:"yellow"}}  elevation={3}>
+          <Paper className={classes.paper}  style={{backgroundColor:"yellow"}}  elevation={3}>
 
           <Skeleton />
       <Skeleton animation={false} />
@@ -58,7 +69,7 @@ return (
           </Paper>
         </Grid>
         <Grid item xs={4}>
-          <Paper className={classes.paper} elevation={0} style={{backgroundColor:"blue"}} elevation={3}>
+          <Paper className={classes.paper}  style={{backgroundColor:"white"}} elevation={3}>
           <Skeleton />
       <Skeleton animation={false} />
       <Skeleton animation="wave" />
@@ -71,10 +82,40 @@ return (
       <Skeleton />
       <Skeleton animation={false} />
       <Skeleton animation="wave" />
+      <List component="nav" className={classes.root} aria-label="mailbox folders">
+  <ListItem button>
+    <ListItemText primary="Inbox" />    
+     <Checkbox
+            icon={<CheckBoxOutlineBlankIcon fontSize="small" />}
+            icon={<StarIcon />}
+            checkedIcon={<StarIcon />}
+            name="checkedI"
+            style={{"color":"yellow"}}
+          />
+  </ListItem>
+  <Divider />
+  <ListItem button divider>
+    <ListItemText primary="Drafts" />
+  </ListItem>
+  <ListItem button>
+    <ListItemText primary="Trash" />
+  </ListItem>
+  <Divider light />
+  <ListItem button>
+    <ListItemText primary="Spam" />
+  </ListItem>
+</List>
+
+      <div style ={{"height":"30px","width":"100%"}}>
+
+  <Button color="secondary" variant="contained">+</Button>
+
+</div>
+
           </Paper>
         </Grid>
         <Grid item xs={4}>
-          <Paper className={classes.paper} elevation={0} style={{backgroundColor:"red"}} elevation={3}>
+          <Paper className={classes.paper}  style={{backgroundColor:"red"}} elevation={3}>
           <Skeleton />
       <Skeleton animation={false} />
       <Skeleton animation="wave" />
