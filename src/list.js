@@ -67,7 +67,7 @@ const useStyles = makeStyles((theme) => ({
 const messages = [
   {
     id: 1,
-    primary: 'Brunch this week?',
+    primary: 'Brunch this week!',
     secondary: "I'll be in the neighbourhood this week. Let's grab a bite to eat",
     person: 'https://images.pexels.com/photos/1699159/pexels-photo-1699159.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
   },
@@ -116,7 +116,16 @@ const messages = [
 
 export default function Todo() {
   const classes = useStyles();
-  const [Dta,setDta]=useState({txt:"",img:"",txt2:""})
+  const [Dta,setDta]=useState({txt:"What is Z-index in react?",img:"https://images.pexels.com/photos/464337/pexels-photo-464337.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",txt2:"zIndex is the Expo and React Native analog of CSS's z-index property which lets the developer control the order in which components are displayed over one another."})
+  function changeBackground(e) {
+    e.target.style.background = 'rgba(0,0,0,0.3)';
+  }
+
+
+  function changeBackground2(e) {
+    e.target.style.background = 'transparent';
+  }
+
  
 return (
     <body style={{"backgroundImage":"url('https://images.pexels.com/photos/6545222/pexels-photo-6545222.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')","backgroundSize":"cover",height:'100vh'}} className={classes.root}>
@@ -147,31 +156,31 @@ return (
         deleteIcon={<DoneIcon />}
       />
 
-<ListItem>
+<ListItem onMouseEnter={changeBackground}  onMouseLeave={changeBackground2}>
 <ListItemIcon>{ <AccountBalanceIcon/>}</ListItemIcon>
 <ListItemText primary="Current" />
 </ListItem>
 <Divider variant="inset" component="li" />
 
-<ListItem>
+<ListItem onMouseEnter={changeBackground} onMouseLeave={changeBackground2}>
 <ListItemIcon>{ <CheckCircleIcon/>}</ListItemIcon>
 <ListItemText primary="Done" />
 </ListItem>
 <Divider variant="inset" component="li" />
 
-<ListItem>
+<ListItem onMouseEnter={changeBackground} onMouseLeave={changeBackground2} >
 <ListItemIcon>{ <AccessTimeIcon />}</ListItemIcon>
 <ListItemText primary="Pending" />
 </ListItem>
 <Divider variant="inset" component="li" />
 
-<ListItem>
+<ListItem onMouseEnter={changeBackground} onMouseLeave={changeBackground2}>
 <ListItemIcon>{ <AllInclusiveIcon/>}</ListItemIcon>
 <ListItemText primary="Favourites" />
 </ListItem>
 <Divider variant="inset" component="li" />
 
-<ListItem>
+<ListItem onMouseEnter={changeBackground}  onMouseLeave={changeBackground2}>
 <ListItemIcon>{ <BlockIcon />}</ListItemIcon>
 <ListItemText primary="History" />
 </ListItem>
