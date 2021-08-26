@@ -157,32 +157,32 @@ return (
       />
 
 <ListItem onMouseEnter={changeBackground}  onMouseLeave={changeBackground2}>
-<ListItemIcon>{ <AccountBalanceIcon/>}</ListItemIcon>
-<ListItemText primary="Current" />
+<ListItemIcon style={{color:"black"}}>{ <AccountBalanceIcon/>}</ListItemIcon>
+<ListItemText primary="Current" style={{color:"black"}} />
 </ListItem>
 <Divider variant="inset" component="li" />
 
 <ListItem onMouseEnter={changeBackground} onMouseLeave={changeBackground2}>
-<ListItemIcon>{ <CheckCircleIcon/>}</ListItemIcon>
-<ListItemText primary="Done" />
+<ListItemIcon style={{color:"black"}}>{ <CheckCircleIcon/>}</ListItemIcon>
+<ListItemText primary="Done" style={{color:"black"}}/>
 </ListItem>
 <Divider variant="inset" component="li" />
 
 <ListItem onMouseEnter={changeBackground} onMouseLeave={changeBackground2} >
-<ListItemIcon>{ <AccessTimeIcon />}</ListItemIcon>
-<ListItemText primary="Pending" />
+<ListItemIcon style={{color:"black"}}>{ <AccessTimeIcon />}</ListItemIcon>
+<ListItemText primary="Pending" style={{color:"black"}}/>
 </ListItem>
 <Divider variant="inset" component="li" />
 
 <ListItem onMouseEnter={changeBackground} onMouseLeave={changeBackground2}>
-<ListItemIcon>{ <AllInclusiveIcon/>}</ListItemIcon>
-<ListItemText primary="Favourites" />
+<ListItemIcon style={{color:"black"}}>{ <AllInclusiveIcon/>}</ListItemIcon>
+<ListItemText primary="Favourites" style={{color:"black"}}/>
 </ListItem>
 <Divider variant="inset" component="li" />
 
 <ListItem onMouseEnter={changeBackground}  onMouseLeave={changeBackground2}>
-<ListItemIcon>{ <BlockIcon />}</ListItemIcon>
-<ListItemText primary="History" />
+<ListItemIcon style={{color:"black"}}>{ <BlockIcon />}</ListItemIcon>
+<ListItemText primary="History" style={{color:"black"}}/>
 </ListItem>
 <Divider variant="inset" component="li" />
 
