@@ -36,6 +36,10 @@ import Button from '@material-ui/core/Button';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListSubheader from '@material-ui/core/ListSubheader';
+import Chip from '@material-ui/core/Chip';
+import DoneIcon from '@material-ui/icons/Done';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import InboxIcon from '@material-ui/icons/MoveToInbox';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -132,33 +136,48 @@ return (
 <Grid item xs={3}>
 <Paper   style={{backgroundColor:"rgba(255, 255, 255,0.0)", position: 'relative', zIndex: '1',height:"100vh"}}  elevation={0}>
 <h1>To Do List</h1>
-<List className={classes.root}>
+<List align="left" style={{"paddingLeft":"20px"}}>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<Chip
+        
+        label="Create"
+        clickable
+        color="primary"
+        style={{height:"30px",padding:"20px",fontSize:"15px"}}
+        deleteIcon={<DoneIcon />}
+      />
+
 <ListItem>
-<ListItemAvatar>
-<Avatar>
-  <ImageIcon />
-</Avatar>
-</ListItemAvatar>
-<ListItemText primary="Photos" secondary="Jan 9, 2014" />
+<ListItemIcon>{ <AccountBalanceIcon/>}</ListItemIcon>
+<ListItemText primary="Current" />
 </ListItem>
 <Divider variant="inset" component="li" />
+
 <ListItem>
-<ListItemAvatar>
-<Avatar>
-  <WorkIcon />
-</Avatar>
-</ListItemAvatar>
-<ListItemText primary="Work" secondary="Jan 7, 2014" />
+<ListItemIcon>{ <CheckCircleIcon/>}</ListItemIcon>
+<ListItemText primary="Done" />
 </ListItem>
 <Divider variant="inset" component="li" />
+
 <ListItem>
-<ListItemAvatar>
-<Avatar>
-  <BeachAccessIcon />
-</Avatar>
-</ListItemAvatar>
-<ListItemText primary="Vacation" secondary="July 20, 2014" />
+<ListItemIcon>{ <AccessTimeIcon />}</ListItemIcon>
+<ListItemText primary="Pending" />
 </ListItem>
+<Divider variant="inset" component="li" />
+
+<ListItem>
+<ListItemIcon>{ <AllInclusiveIcon/>}</ListItemIcon>
+<ListItemText primary="Favourites" />
+</ListItem>
+<Divider variant="inset" component="li" />
+
+<ListItem>
+<ListItemIcon>{ <BlockIcon />}</ListItemIcon>
+<ListItemText primary="History" />
+</ListItem>
+<Divider variant="inset" component="li" />
+
+
 </List>
 
 </Paper>
@@ -196,18 +215,7 @@ return (
            </React.Fragment>
          ))}
        </List>
-     {/* <div style ={{"height":"40px","width":"100%",  position: "absolute",
- left: "0px",
- bottom: "70px",
- zIndex: 1,backgroundColor:"transparent"}} align="center">
 
-<Fab color="secondary" aria-label="add" className={classes.fabButton} onClick={()=>{
- console.log("cliki")
-}}>
-           <AddIcon />
-         </Fab>
-
-</div> */}
 
          </Paper>
        </Grid>
@@ -219,6 +227,7 @@ return (
        <h2 style={{"color":"white"}}>{Dta.txt}</h2>
        <br></br>
        <br></br>
+       <Divider variant="inset"  />
        <h3 style={{"color":"white"}}>{Dta.txt2}</h3>
      
     
@@ -248,3 +257,9 @@ return (
   );
 }
 
+import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
+import AddIcon from '@material-ui/icons/Add';
+import CheckCircleIcon from '@material-ui/icons/CheckCircle';
+import AccessTimeIcon from '@material-ui/icons/AccessTime';
+import AllInclusiveIcon from '@material-ui/icons/AllInclusive';
+import BlockIcon from '@material-ui/icons/Block';
